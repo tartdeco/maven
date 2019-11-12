@@ -29,7 +29,7 @@ jobs:
       run: |
         export
         declare -x ARTIFACT_NAME="m2-primer"
-        declare -x ARTIFACT_ARCHIVE_NAME="${ARTIFACT_ARCHIVE_NAME}.zip"
+        declare -x ARTIFACT_ARCHIVE_NAME="${ARTIFACT_NAME}.zip"
         declare -x ARTIFACT_PATH="$HOME"
         echo "::set-env name=ARTIFACT_NAME::${ARTIFACT_NAME}"
         echo "::set-env name=ARTIFACT_ARCHIVE_NAME::${ARTIFACT_ARCHIVE_NAME}"
