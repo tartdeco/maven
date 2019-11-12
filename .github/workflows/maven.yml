@@ -38,13 +38,13 @@ jobs:
     - name: Download artifact
       uses: actions/download-artifact@master
       with:
-        name: ${{ env.ARTIFACT_NAME }}
+        name: ${{ env.ARTIFACT_ARCHIVE_NAME }}
         path: ${{ env.ARTIFACT_PATH }}
 
     - name: Extract imaged .m2 directory
       run: |
         cd "${HOME}"
-        unzip "${ARTIFACT_NAME}"
+        unzip "${ARTIFACT_ARCHIVE_NAME}"
         rm -rf .m2
         mv "${ARTIFACT_NAME}" .m2
         echo "Checking fo rupdates"
